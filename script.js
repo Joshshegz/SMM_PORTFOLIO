@@ -167,6 +167,10 @@
     });
   }
 
+  initMobileMenu();
+  initScrollReveal();
+  initToolsScatter();
+
   var el = document.getElementById("hero-type");
   if (!el) return;
 
@@ -184,9 +188,6 @@
   var betweenMs = 100;
 
   if (prefersReducedMotion) {
-    initMobileMenu();
-    initScrollReveal();
-    initToolsScatter();
     el.textContent = lines[0];
     return;
   }
@@ -219,8 +220,5 @@
     }
   }
 
-  initMobileMenu();
-  initScrollReveal();
-  initToolsScatter();
   step();
 })();
