@@ -1,0 +1,3 @@
+# Static site: publish repo root so / and /thank-you.html both deploy
+[build]
+  publish = "."
