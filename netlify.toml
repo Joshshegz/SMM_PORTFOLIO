@@ -1,3 +1,14 @@
 # Static site: publish repo root so / and /thank-you.html both deploy
 [build]
   publish = "."
+
+# Browser security headers (every deploy)
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), payment=()"
+    # CSP: tuned for this site (Google Fonts, Icons8 tool icons, inline particle vars)
+    Content-Security-Policy = "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' https://img.icons8.com data:; font-src 'self' https://fonts.gstatic.com data:; connect-src 'self'; form-action 'self'; base-uri 'self'; frame-ancestors 'none'; upgrade-insecure-requests"

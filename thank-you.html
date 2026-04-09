@@ -10,17 +10,59 @@
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
-  <main class="thank-you-page">
-    <div class="wrap thank-you-page__inner">
-      <p class="section-label">Contact</p>
-      <h1 class="thank-you-page__title">Thanks — your message is in</h1>
-      <p class="thank-you-page__lede">I’ll reply within 48 hours. If you don’t see my email, check spam or promotions.</p>
-      <div class="thank-you-page__actions">
-        <a class="btn" href="/">Back to home</a>
-        <a class="btn btn--dark" href="/#contact">Send another message</a>
-      </div>
+<body class="thank-you-body">
+  <div class="thank-you-page">
+    <div class="thank-you-page__bg" aria-hidden="true">
+      <span class="thank-you-orb thank-you-orb--1"></span>
+      <span class="thank-you-orb thank-you-orb--2"></span>
+      <span class="thank-you-orb thank-you-orb--3"></span>
+      <span class="thank-you-drift thank-you-drift--1"></span>
+      <span class="thank-you-drift thank-you-drift--2"></span>
     </div>
-  </main>
+
+    <main class="thank-you-page__main">
+      <div class="thank-you-card">
+        <div class="thank-you-success thank-you-rise" style="--ty-delay: 0.1s">
+          <div class="thank-you-rings" aria-hidden="true">
+            <span class="thank-you-ring thank-you-ring--1"></span>
+            <span class="thank-you-ring thank-you-ring--2"></span>
+            <span class="thank-you-ring thank-you-ring--3"></span>
+          </div>
+          <div class="thank-you-icon-wrap">
+            <svg class="thank-you-check-svg" viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <defs>
+                <linearGradient id="thank-you-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#ffd8bf" />
+                  <stop offset="55%" stop-color="#ff8b49" />
+                  <stop offset="100%" stop-color="#ff6a1a" />
+                </linearGradient>
+              </defs>
+              <circle class="thank-you-check-bg" cx="44" cy="44" r="40" />
+              <circle class="thank-you-check-ring-svg" cx="44" cy="44" r="38" />
+              <path class="thank-you-check-path" d="M28 46 L38 56 L60 32" stroke="url(#thank-you-grad)" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </div>
+        </div>
+
+        <p class="section-label thank-you-rise thank-you-shimmer-label" style="--ty-delay: 0.45s">Message received</p>
+
+        <h1 class="thank-you-page__title thank-you-rise" style="--ty-delay: 0.58s">
+          <span class="thank-you-title-line">You’re all set.</span>
+          <span class="thank-you-title-accent">I’ve got your note.</span>
+        </h1>
+
+        <p class="thank-you-page__lede thank-you-rise" style="--ty-delay: 0.72s">
+          I’ll reply within <strong>48 hours</strong>. If nothing shows up, peek at <strong>spam</strong> or <strong>Promotions</strong>—sometimes filters get curious.
+        </p>
+
+        <div class="thank-you-page__actions thank-you-rise" style="--ty-delay: 0.88s">
+          <a class="btn thank-you-btn-pulse" href="/">Back to home</a>
+          <a class="btn btn--dark" href="/#contact">Send another message</a>
+        </div>
+
+        <p class="thank-you-foot thank-you-rise" style="--ty-delay: 1.02s">— Josh</p>
+      </div>
+    </main>
+  </div>
 </body>
 </html>
